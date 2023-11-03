@@ -351,13 +351,7 @@
                                     <img src="{% static 'img/brasao-transparente.png' %}" alt="Descrição da imagem">
                                     <form method="post" action="{% url 'home' %}">
                                         {% csrf_token %}
-                                        {{ form.nome }}
-                                        {{ form.telefone }}
-                                        {{ form.email }}
-                                        {{ form.opcoes }}
-                                        {{ form.horario }}
-                                        {{ form.data }}
-                                        {{ form.protocolo }} 
+                                        {{form.as_p}}
                                         <input type="submit" class="btn btn-primary" value="Salvar">
                                     </form>
                                 </div>

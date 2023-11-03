@@ -17,9 +17,9 @@ def gerar_protocolo():
             return protocolo
 
 class ContatoForm(forms.Form):
-     nome = forms.CharField(label='Nome', max_length=100, widget=forms.TextInput(attrs={'class': 'form-control my-custom-class'}))
-     telefone = forms.CharField(label='Telefone', max_length=30, widget=forms.TextInput(attrs={'class': 'form-control my-custom-class'}))
-     email = forms.EmailField(label='Email', max_length=100, widget=forms.EmailInput(attrs={'class': 'form-control my-custom-class'}))
+     nome = forms.CharField(label='Nome', max_length=100, widget=forms.TextInput(attrs={'class': 'form-control form-class-nome'}))
+     telefone = forms.CharField(label='Telefone', max_length=30, widget=forms.TextInput(attrs={'class': 'form-control form-class-telefone'}))
+     email = forms.EmailField(label='Email', max_length=100, widget=forms.EmailInput(attrs={'class': 'form-control form-class-email'}))
      
      unidadeCarro = 'Unidade de Placa de Carro'
      parCarro = 'Par de Placa de Carro'
@@ -31,14 +31,14 @@ class ContatoForm(forms.Form):
             (parCarro, parCarro),
             (moto, moto),
         ],
-        label="Opções de Agendamento", widget=forms.Select(attrs={'class': 'form-control my-custom-select-class'})
+        label="Opções", widget=forms.Select(attrs={'class': 'form-control form-class-opcoes'})
     )
      horario = forms.ChoiceField(
         choices=[
             (f"{hour:02d}:{minute:02d}", f"{hour:02d}:{minute:02d}")
             for hour in range(8, 17) for minute in (0, 30)
         ],
-        label="Selecione um horário", widget=forms.Select(attrs={'class': 'form-control my-custom-select-class'})
+        label="Horário", widget=forms.Select(attrs={'class': 'form-control form-class-horario'})
     )
      jardimCearense = 'Fortaleza - CE: Godofredo Maciel, 2743-A - Jardim Cearense'
      parquelandia = 'Fortaleza - CE: Gustavo Sampaio, 1293 - Parquelândia'
@@ -53,10 +53,10 @@ class ContatoForm(forms.Form):
             (quixere, quixere),
             (itapaje, itapaje)
         ],
-        label='Opções de locais',widget=forms.Select(attrs={'class': 'form-control my-custom-select-class'})
+        label='Locais',widget=forms.Select(attrs={'class': 'form-control form-class-local'})
     )
      data = forms.DateField(
-        label='Data de Agendamento',
+        label='Agendamento',
         widget=forms.DateInput(attrs={'type': 'date'}),
         
     )

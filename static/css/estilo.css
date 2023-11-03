@@ -827,3 +827,43 @@ body{
   .btn2:hover::before{
     transform: scaleY(1);
   }
+  .my-custom-class {
+    /* Adicione aqui as propriedades de estilo desejadas */
+    border: 1px solid #ccc; /* Exemplo de estilo de borda */
+    padding: 50px; /* Exemplo de estilo de preenchimento */
+    font-size: 14px; /* Exemplo de estilo de tamanho de fonte */
+    /* Outras propriedades de estilo */
+}
+.form-control{
+    
+}
+.form-class-nome{
+    box-shadow: 0 0 15px black;
+    border-radius: 25px;
+}
+.form-class-telefone{
+    background-color: green;
+    margin: 15px;
+    padding: 25pxw;
+}
+.form-class-email{
+    background-color: yellow;
+
+}
+.form-class-opcoes{
+    background-color: purple;
+
+}
+.form-class-horario{
+}
+
+/* Estilizando todas as labels dentro do formulário */
+form label {
+    /* Adicione as propriedades de estilo desejadas para todas as labels aqui */
+    font-weight: bold;
+    color: blue;
+    margin-left: 50px;
+    box-shadow: 0 0 20px black;
+}
+
+/* Estilizando uma label específica com base em seu conteúdo */
