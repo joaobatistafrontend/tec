@@ -1,0 +1,378 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <title>TecPlac</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="inicio">
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="{% static 'img/brasao-transparente.png' %}" alt="">
+            </div>
+            <div class="mobile-menu-icon">
+                <button class="icon"></button>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item"><a onclick="changeTo('section-initial')" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a onclick="changeTo('section-sobrenos')" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a onclick="changeTo('section-servicos')" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a onclick="changeTo('section-politica-certificados')" class="nav-link">Política e Certificados</a></li>
+                <li class="nav-item"><a onclick="changeTo('section-unidades')" class="nav-link">Nossas unidades</a></li>
+                <li class="nav-item"><a onclick="changeTo('section-agendamento')" class="nav-link">Agendamento</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <main class="main-wrapper">
+
+        <!-- =================
+            Content Start
+        =============================================================================== -->
+        <div class="content-page pull-right">
+
+            <!-- =================
+                Section Intro Start
+            =============================================================================== -->
+            <section id="section-initial">
+                <div class="background-intial-div">
+                    <div class="gradient-background-div">
+                        <div class="container">
+                            <div class="container-text">
+                                <strong><h1>TecPlac</h1></strong>
+                                <hr>
+                                <p>
+                                    Somos uma empresa especializada na fabricação e comercialização de placas para veículos
+                                    automotores.
+                                </p>
+                                <div class="placa-carro">
+                                    <img src="{% static 'img/placa-img.png' %}" alt="Descrição da imagem">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Intro End -->
+
+            <!-- =================
+                Section About Start
+            =============================================================================== -->
+            <section id="section-sobrenos">
+                <div class="sobrenos-div">
+                    <div class="sobrenos-content">
+                        <div class="sobrenos-content-text">
+                            <strong><h1>Sobre nós</h1></strong><br>
+                            <p>
+                                Com o surgimento da resolução 231 de 15 de março de 2007 do CONTRAN, surge oficialmente a 
+                                empresa TECPLAC INDÚSTRIA E COMÉRCIO DE PLACAS EM GERAL LTDA ME no final do ano de 2007, tendo 
+                                como atividades fins a fabricação e vendas de blanks e tarjetas de identificação veicular para 
+                                carros e motos no Estado do Ceará.
+                            </p><br>
+                            <p>
+                                A empresa atualmente atua no estado do Ceará, sediada no município de Fortaleza, com uma 
+                                unidade fabril, que industrializa o produto e distribui para toda a região e estados vizinhos.
+                            </p><br>
+                            <p>
+                                É uma empresa que tem como missão trabalhar prioritariamente visando atender da melhor forma 
+                                tanto seus clientes quanto seus parceiros, assim como valorizar a equipe que compõe seu 
+                                quadro de colaboradores.
+                            </p><br>
+                            <p>
+                                De modo a garantir o bem-estar dos funcionários e a satisfação dos clientes, a empresa trabalha 
+                                com as mais modernas tecnologias disponíveis para a área no mercado, sempre em busca da dinamização 
+                                de seus processos, do melhor atendimento aos recursos humanos que envolvem a atuação da empresa 
+                                e trabalhando conforme as normas legais.
+                            </p><br>
+                        </div>
+                        <div class="sobrenos-content-image">
+                            <img src="{% static 'img/iso9001.png' %}" alt="Descrição da imagem">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section About End -->
+
+            <!-- =================
+                Section Serviços Start
+            =============================================================================== -->
+            <section id="section-servicos">
+                <div class="servicos-div">
+                    <div class="servicos-content">
+                        <div class="servicos-content-carrousel">
+                            <!-- <div class="slider-wrapper">
+                                <div class="slider">
+                                    <img id="slide-1" src="assets/img/servico-img1.jpg" alt="Descrição da imagem">
+                                    <img id="slide-2" src="assets/img/servico-img2.jpg" alt="Descrição da imagem">
+                                    <img id="slide-3" src="assets/img/servico-img3.jpg" alt="Descrição da imagem">
+                                    <img id="slide-4" src="assets/img/servico-img4.jpg" alt="Descrição da imagem">
+                                    <img id="slide-5" src="assets/img/servico-img5.jpg" alt="Descrição da imagem">
+                                </div>
+                                <div class="slider-nav">
+                                    <a href="#slide-1"></a>
+                                    <a href="#slide-2"></a>
+                                    <a href="#slide-3"></a>
+                                    <a href="#slide-4"></a>
+                                    <a href="#slide-5"></a>
+                                </div>
+                            </div> -->
+                            <div class="content">
+                                <div class="slides">
+                                    <input type="radio" name="slide" id="slide1" checked>
+                                    <input type="radio" name="slide" id="slide2">
+                                    <input type="radio" name="slide" id="slide3">
+                                    <input type="radio" name="slide" id="slide4">
+                                    <input type="radio" name="slide" id="slide5">
+    
+                                    <div class="slide s1">
+                                        <img src="{% static 'img/servico-img1.jpg' %}" alt="Descrição da imagem">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="{% static 'img/servico-img2.jpg' %}" alt="Descrição da imagem">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="{% static 'img/servico-img3.jpg' %}" alt="Descrição da imagem">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="{% static 'img/servico-img4.jpg' %}" alt="Descrição da imagem">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="{% static 'img/servico-img5.jpg' %}" alt="Descrição da imagem">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navigation">
+                                <label class="bar" for="slide1"></label>
+                                <label class="bar" for="slide2"></label>
+                                <label class="bar" for="slide3"></label>
+                                <label class="bar" for="slide4"></label>
+                                <label class="bar" for="slide5"></label>
+                            </div>
+                        </div>
+                        <div class="servicos-content-text">
+                            <strong><h1>Serviços</h1></strong><br>
+                            <p>
+                                A TecPlac é uma empresa especializada na produção e comercialização de placas automotivas. 
+                                Nosso compromisso inabalável é fornecer um <strong style="color: #d9a156">serviço excepcional
+                                </strong> e <strong strong style="color: #d9a156">atendimento de alta 
+                                qualidade</strong>, visando atender plenamente às suas necessidades.
+                            </p><br>
+                            <p>
+                                Confira algumas fotos da nossa fábrica.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="servicos-video">
+                        <p>Acompanhe a seguir um vídeo da nossa produção de placas.</p>
+                        <hr>
+                        <iframe class="youtube-video"
+                            frameborder="0"
+                            title="TecPlac - Produção de placas"
+                            src="https://www.youtube.com/embed/TuvP6LrRdj8"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Serviços End -->
+
+            <!-- =================
+                Section Politica de Qualidade Start
+            =============================================================================== -->
+            <section id="section-politica-certificados" >
+                <div class="politica-certificados-div">
+                    <div class="politica-certificados-content">
+                        <div class="politica-content">
+                            <strong><p>Política de qualidade</p></strong><br>
+                            <p>
+                                Fabricar e comercializar placas de identificação para veículos automotores, buscando 
+                                um crescimento no mercado regional, a satisfação de seus clientes e o desenvolvimento 
+                                de seus colaboradores, através da melhoria contínua e obedecendo as normas legais.
+                            </p>
+                        </div>
+                        <div class="certificados-content">
+                            <div class="certificados-box">
+                                <div class="certificados-text">
+                                    <strong><p>Certificados</p></strong><br>
+                                    <p>
+                                        Prezando pela qualidade dos nossos serviços, a Tecplac está sempre em busca de 
+                                        certificar os processos e o atendimento.
+                                    </p><br>
+                                    <div class="download-document">
+                                        <ul>
+                                            <li> <a href="{% static 'documents/iso-9001-tecplac.pdf' %}" target="_blank">Certificado ISO 9001</a> </li>
+                                            <li> <a href="{% static 'documents/certificado-abnt.pdf' %}" target="_blank">Certificado ABNT</a></li>
+                                        </ul><br>
+                                    </div>
+                                    <p>Resoluções: </p><br>
+                                    <div class="download-document">
+                                        <ul>
+                                            <li> <a href="{% static 'documents/resolucao-contran.pdf' %}" target="_blank">Resolução - CONTRAN- Nº 969</a> </li>
+                                        </ul>
+                                    </div>
+                                    <div class="certificate-image">
+                                        <img src="{% static 'img/certificate-image.png' %}" alt="Descrição da imagem">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Poilitica de Qualidade End -->
+
+            <!-- =================
+                Section Certificados Start
+            =============================================================================== -->
+            <section id="section-unidades">
+                <div class="enderecos-title">
+                    <p>Conheça nossas unidades</p>
+                    <hr>
+                </div>
+                <div class="enderecos">
+                    <div class="card card-1">
+                        <div class="card-head">
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63698.64074651798!2d-38.64699880781005!3d-3.7742426170573142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74dd5bb263837%3A0x9af43d98ea5646bd!2sPlacplac!5e0!3m2!1spt-BR!2sbr!4v1698354764245!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-estado">Fortaleza- CE</p>
+                            <p class="rua">
+                                Av. Godofredo Maciel, 2743-A
+                            </p>
+                            <p class="bairro">
+                                Jardim Cearense
+                            </p>
+                            <p class="cep">
+                                60710-001
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="card card-1">
+                        <div class="card-head">
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3419928684393!2d-38.55842562593422!3d-3.7354407432061114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74976e2e6d6ed%3A0x355a397f8189d55d!2sR.%20Gustavo%20Sampaio%2C%201293%20-%20Parquel%C3%A2ndia%2C%20Fortaleza%20-%20CE%2C%2060455-001!5e0!3m2!1spt-BR!2sbr!4v1698428093363!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-estado">Fortaleza- CE</p>
+                            <p class="rua">
+                                R. Gustavo Sampaio, 1293
+                            </p>
+                            <p class="bairro">
+                                Parquelândia
+                            </p>
+                            <p class="cep">
+                                60455-001
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="card card-1">
+                        <div class="card-head">
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.293296707139!2d-40.75419042592962!3d-4.162633045533344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x794e42dfb7fcd45%3A0x420f34b6f0536c34!2sAv.%2012%20de%20Novembro%2C%2050%20-%20Centro%2C%20Guaraciaba%20do%20Norte%20-%20CE%2C%2062380-000!5e0!3m2!1spt-BR!2sbr!4v1698428172133!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-estado">Guaraciaba do Norte- CE</p>
+                            <p class="rua">
+                                Av. 12 de Novembro, 50
+                            </p>
+                            <p class="bairro">
+                                Centro
+                            </p>
+                            <p class="cep">
+                                62380-000
+                            </p>
+                        </div>
+                    </div>
+                    
+            
+            
+                    <div class="card card-1">
+                        <div class="card-head">
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2021529555827!2d-37.99324332591904!3d-5.070958451473221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bbd54673e7f2a3%3A0x8a46541ab53d68ce!2sR.%20Mte.%20Felipe%2C%20917%20-%20Centro%2C%20Quixer%C3%A9%20-%20CE%2C%2062920-000!5e0!3m2!1spt-BR!2sbr!4v1698428372311!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-estado">Quixeré- CE</p>
+                            <p class="rua">
+                                R. Mte. Felipe, 917
+                            </p>
+                            <p class="bairro">
+                                Centro
+                            </p>
+                            <p class="cep">
+                                62920-000
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-1">
+                        <div class="card-head">
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.545846437475!2d-39.58882392593461!3d-3.6902334429772794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c06bc6c40ab6fd%3A0x8cf0e64cb0fac8b8!2sR.%20Jandira%20Bastos%20Magalh%C3%A3es%2C%20689%20-%20Itapaj%C3%A9%2C%20CE%2C%2062600-000!5e0!3m2!1spt-BR!2sbr!4v1698428494071!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-estado">Itapajé- CE</p>
+                            <p class="rua">
+                                R. Jandira Bastos Magalhães, 689
+                            </p>
+                            <p class="cep">
+                                62600-000
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Certificados End -->
+
+            <!-- =================
+                Fale Conosco Start
+            =============================================================================== -->
+            <section id="section-agendamento">
+                <div class="agendamento-div">
+                    <div class="agendamento-content">
+                        <div class="agendamento-text-content">
+                            <strong><p>Realize o seu agendamento</p></strong><br>
+                            <p>
+                                Faça agora o seu agendamento e dirija-se a uma de nossas lojas com o documento que 
+                                iremos mandar ao seu email
+                            </p>
+                        </div>
+                        <div class="agendamento-form-content">
+                            <div class="agendamento-form-box">
+                                <div class="agendamento-form-text">
+                                    <img src="{% static 'img/brasao-transparente.png' %}" alt="Descrição da imagem">
+                                    <form method="post" action="{% url 'home' %}">
+                                        {% csrf_token %}
+                                        {{ form.nome }}
+                                        {{ form.telefone }}
+                                        {{ form.email }}
+                                        {{ form.opcoes }}
+                                        {{ form.horario }}
+                                        {{ form.data }}
+                                        {{ form.protocolo }} 
+                                        <input type="submit" class="btn btn-primary" value="Salvar">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Atendimento End -->
+        </div>
+         <!-- Content End -->
+
+    </main>
+
+    <script defer src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

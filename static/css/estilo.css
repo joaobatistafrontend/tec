@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Manrope:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+header {
+    background-color: #f9f9f9;
+    box-shadow: 0px 3px 10px #9a9a9a;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+body{
+    
+}
+
+.main-wrapper{
+    height: calc(100vh - 4rem);
+}
+
+/* Barra de navegação */
+
+.nav-bar {
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 140px;
+    border-radius: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-list :hover{
+    color: #454545;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #898989;
+    font-weight: 400;
+}
+
+.mobile-menu-icon{
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #898989;
+    cursor: pointer;
+}
+  
+.icon::after,
+.icon::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #898989;
+    margin-top: 5px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 780px) {
+    .nav-bar{
+        justify-content: space-between;
+    }
+
+    .nav-link{
+        color: #898989;
+    }
+
+    .icon {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #f9f9f9;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.16s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.32s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.48s;
+    }
+
+    .nav-list li:nth-child(4) a {
+        transition: 0.5s 0.64s;
+    }
+
+    .nav-list li:nth-child(5) a {
+        transition: 0.5s 0.80s;
+    }
+
+    .nav-list li:nth-child(6) a {
+        transition: 0.5s 0.96s;
+    }
+    
+     
+  
+    /* Estilos ativos */
+  
+    .nav-bar.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav-bar.active .nav-list a {
+      opacity: 1;
+    }
+
+    .sobrenos-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* servicos */
+
+    .servicos-content{
+        flex-direction: column;
+    }
+
+    .servicos-content-carrousel{
+        order: 2;
+    }
+
+    /* politica-certificados */
+
+    .politica-certificados-content{
+        flex-direction: column;
+    }
+
+    /* agendamento */
+
+    .agendamento-content{
+        flex-direction: column;
+    }
+}
+
+/* Sessão de ínicio */
+
+.background-intial-div{
+    height: 100vh;
+    min-height: 44rem;
+    background-image: url("../img/bg-principal.jpg");
+    background-size: cover;
+}
+
+.gradient-background-div{
+    display: flex;
+    height: 100vh;
+    min-height: 44rem;
+    background-image: linear-gradient(to right, rgba(255,255,255,1) 40%, rgba(255,255,255,.7) 64%, rgba(255,255,255,.4) 86%, rgba(255,255,255,0) 100%);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 94%;
+    max-width: 67rem;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+.container-text h1{
+    color: #d9a156;
+    font-size: 55px;
+}
+
+.container-text p{
+    color: #898989;
+    width: 100%;
+    max-width: 22rem;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.container-text hr{
+    margin: 2rem 0;
+    width: 100%;
+    border: 2px solid #d9a156;
+    max-width: 13rem;
+}
+
+.placa-carro{
+    margin-top: 2rem;
+}
+
+.placa-carro img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sessão de sobre nós */
+
+.sobrenos-div{
+    display: flex;
+    background-color: #d9a156;
+    min-height: 30rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.sobrenos-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 72rem;
+}
+
+.sobrenos-content-text{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    align-items: center;
+}
+
+.sobrenos-content-text h1, p{
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.sobrenos-content-image{
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    align-items: center;
+}
+
+.sobrenos-content-image img{
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+}
+
+/* sessão de serviços */
+
+.servicos-div{
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.servicos-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 72rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.servicos-content-text{
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.servicos-content-text p, h1{
+    color: #454545;
+    text-align: center;
+}
+
+.servicos-content-carrousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.youtube-video{
+    width: 100%;
+    max-width: 620px;
+    height: 340px;
+}
+
+.servicos-video{
+    width: 90%;
+    max-width: 72rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.servicos-video p{
+    text-align: center;
+    font-size: 30px;
+    color: #d9a156;
+}
+
+.servicos-video hr{
+    margin: 2rem 0rem 3rem 0rem;
+    width: 100%;
+    border: 1px solid #d9a156;
+    max-width: 19rem;
+}
+
+.slider-wrapper{
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+.slider{
+    overflow-x: hidden;
+    display: flex;
+    aspect-ratio: 4 / 3;
+    /* overflow-x: auto; */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.slider-nav a{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #6c6c6c;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    background-color: #939393;
+}
+
+/* Novo carrousel */
+
+.content{
+    width: 90%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 480px;
+    margin-top: 1rem;
+}
+
+.bar{
+    width: 20px;
+    height: 20px;
+    margin: 6px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s;
+    background-color: #6c6c6c;
+}
+
+.bar:hover{
+    background-color: #bcbcbc;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+/* Sessão política de qualidade e certificados */
+
+.politica-certificados-div{
+    background-color: #f1ae55;
+    display: flex;
+    flex-direction: column;
+    min-height: 36rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.politica-certificados-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 72rem;
+    align-items: center;
+}
+
+.politica-content{
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.politica-content p, strong{
+    text-align: center;
+    color: #f9f9f9;
+}
+
+.politica-content strong{
+    font-size: 24px;
+}
+
+.certificados-content{
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificados-box{
+    background-color: #fff;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 28rem;
+    min-height: 24rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2rem 0rem;
+}
+
+.certificados-text{
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.certificados-text p{
+    width: 100%;
+    color: #454545;
+}
+
+.certificados-text strong{
+    font-size: 24px;
+    color: #454545;
+}
+
+.certificate-image{
+    width: 94%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.certificate-image img{
+    width: 100%;
+    max-width: 3rem;
+    height: auto;
+}
+
+.download-document{
+    max-width: 22rem;
+    width: 90%;
+}
+
+.download-document a{
+    text-decoration: none;
+    color: #337ab7;
+    font-size: 15px;
+}
+
+.download-document ul{
+    line-height: 2;
+}
+
+/* Sessão de localidades */
+
+#section-unidades{
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.enderecos-title{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.enderecos-title p{
+    color: #d9a156;
+    font-size: 30px;
+    text-align: center;
+}
+
+.enderecos-title hr{
+    margin: 2rem 0rem 1rem 0rem;
+    width: 100%;
+    border: 1px solid #d9a156;
+    max-width: 19rem;
+}
+
+.enderecos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 330px;
+    height: 350px;
+    margin: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: -14px 20px 43px #24252a96;
+    border: 3px solid #6b6b6b;
+}
+
+.card-head{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-body{
+    height: 130px;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #363636;
+    border-top: 3px solid #6b6b6b;
+}
+
+.card-body p{
+    color: #6b6b6b;
+    text-align: center;
+}
+
+.map{
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+}
+
+.card-estado{
+    font-size: 15px;
+    margin: 5px 10px ;
+    font-weight: 600;
+}
+
+/* Sessão agendamento */
+
+.agendamento-div{
+    background-color: #f1ae55;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.agendamento-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 74rem;
+    align-items: center;
+}
+
+.agendamento-text-content{
+    max-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0rem;
+    width: 90%;
+}
+
+.agendamento-text-content p, strong{
+    text-align: center;
+    color: #f9f9f9;
+}
+
+.agendamento-text-content strong{
+    font-size: 24px;
+}
+
+.agendamento-form-content{
+    background-image: url(../img/transito-2-borrado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 38rem;
+}
+
+.agendamento-form-box{
+    border-radius: 24px;
+    width: 90%;
+    max-width: 28rem;
+    min-height: 24rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2rem 0rem;
+    border: 2px solid #fff;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 2px 10px #000000;
+}
+
+.agendamento-form-text{
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.agendamento-form-text img{
+    width: 100%;
+    max-width: 10rem;
+    height: auto;
+}
+
+.agendamento-form-text strong{
+    font-size: 24px;
+    color: #454545;
+}
+
+.agendamento-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agendamento-form .input-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0px;
+    max-width: 15rem;
+}
+
+.agendamento-form .input-div input{
+    width: 100%;
+}
+
+/* Botões */
+
+.btn{
+    background: none;
+    border: 2px solid #323232;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    min-width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    color: #ffffff;
+  }
+
+  .btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #323232;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+  }
+
+  .btn1::before{
+    transform: scaleX(0);
+  }
+
+  .btn2::before{
+    transform: scaleY(0);
+  }
+
+  .btn1:hover::before{
+    transform: scaleX(1);
+  }
+
+  .btn2:hover::before{
+    transform: scaleY(1);
+  }
